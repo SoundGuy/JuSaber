@@ -1,22 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-public class SongManager {
-    private List<Song> songs = new List<Song>();
 
-    public SongManager() {
-        
-    }
+namespace BSMG
+{
 
-    public void AddSong(Song song) {
-        songs.Add(song);
-    }
+    public class SongManager
+    {
+        private List<Song> songs = new List<Song>();
 
-    public List<Song> GetSongs() {
-        return new List<Song>(songs);
-    }
+        public SongManager()
+        {
 
-    public void ClearSongs() {
-        songs.Clear();
+        }
+
+        public void AddSong(Song song)
+        {
+            songs.Add(song);
+        }
+
+        public List<Song> GetSongs()
+        {
+            return new List<Song>(songs);
+        }
+
+        public void ClearSongs()
+        {
+            songs.Clear();
+        }
     }
 }

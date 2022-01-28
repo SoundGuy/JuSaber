@@ -1,30 +1,40 @@
 ﻿using UnityEngine;
 
-[System.Serializable]
-public class Note {
-    public float _time;
-    public int _lineIndex;
-    public int _lineLayer;
-    public int _type;
-    public int _cutDirection;
 
-    private bool alreadyHit = false;
-    private bool alreadyMissed = false;
+namespace BSMG
+{
 
-    public bool NotYetHit() {
-        return !alreadyHit;
-    }
-
-    public bool NotYetMissed()
+    [System.Serializable]
+    public class Note
     {
-        return !alreadyMissed;
-    }
+        public float _time;
+        public int _lineIndex;
+        public int _lineLayer;
+        public int _type;
+        public int _cutDirection;
+        public string _customData;
 
-    public void Hit() {
-        alreadyHit = true;
-    }
+        private bool alreadyHit = false;
+        private bool alreadyMissed = false;
 
-    public void Miss() {
-        alreadyMissed = true;
+        public bool NotYetHit()
+        {
+            return !alreadyHit;
+        }
+
+        public bool NotYetMissed()
+        {
+            return !alreadyMissed;
+        }
+
+        public void Hit()
+        {
+            alreadyHit = true;
+        }
+
+        public void Miss()
+        {
+            alreadyMissed = true;
+        }
     }
 }
