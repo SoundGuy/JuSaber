@@ -249,7 +249,7 @@ namespace BSMG
             }
 
             Debug.Log("Progress is: " + www.progress);
-            audioSource.clip = www.GetAudioClip(false, false);
+            audioSource.clip = www.GetAudioClip(false, false,AudioType.OGGVORBIS);
             Debug.Log("Loading audio data succeeded: " + audioSource.clip.LoadAudioData());
             PlaySong();
         }
